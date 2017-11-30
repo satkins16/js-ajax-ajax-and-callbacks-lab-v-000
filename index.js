@@ -1,4 +1,8 @@
 $(document).ready(function (){
+  function handlebarsSetup() {
+    //put any handlebars setup in here
+    Handlebars.registerPartial("userDetails", $("#user-details-partial").html())
+  }
 });
 
 function displayError() {
@@ -24,9 +28,4 @@ function showCommits(el) {
   }).fail(error => {
     displayError()
   })
-}
-
-function handlebarsSetup() {
-  //put any handlebars setup in here
-  Handlebars.registerPartial("userDetails", $("#user-details-partial").html())
 }
