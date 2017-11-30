@@ -41,7 +41,19 @@
       </div>
       <div>
         <h3>Details</h3>
-        <div id="details"></div>
+        <div id="details">
+          <script id="commits-template" type="text/x-handlebars-template">
+            <ul>
+            {{#each this}}
+              <li>
+                <h3>{{ sha }}</h3>
+                <p> {{ commit.message }} </p>
+                <div> {{> userDetails author }} </div>
+              </li>
+            {{/each }}
+            </ul>
+          </script>
+        </div>
       </div>
     </div>
     <script src="jquery-3.1.0.min.js"></script>
