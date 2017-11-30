@@ -3,7 +3,7 @@ $(document).ready(function (){
 
 function displayError() {
   $('#errors').html("I'm sorry, there's been an error. Please try again.")
-}
+}ç
 
 function searchRepositories() {
   const searchTerms = $('#searchTerms').val()
